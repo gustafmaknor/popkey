@@ -1,5 +1,29 @@
 {
   "name": "popKey",
-  "version": "0.0.1",
-  "private": true
+  "version": "0.0.8",
+  "private": true,
+  "description": "Populate KeystoneJS using CSS selectors",
+  "tags": [
+    "KeystoneJS",
+    "CMS",
+    "integration"
+  ],
+  "author": {
+    "name": "Gustaf Mäkinen Nordquist",
+    "email": "gustafmakinennordquist@gmail.com",
+    "url": "gustafmaknor.se"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/gustafmaknor/popkey"
+  },
+  "main": "./popkey.js",
+  "engines": {
+    "node": ">= 0.6"
+  },
+  "dependencies": {
+    "cheerio": "~0.17.0",
+    "crypto": "~0.0.3",
+    "request": "~2.44.0"
+  }
 }
