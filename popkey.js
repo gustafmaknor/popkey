@@ -32,9 +32,15 @@ var Action=require('./lib/action').Action;
 		}
 	}
 	var popkey={
-	    task:function(keystoneModel, tasks){
+	    task:function(keystoneModel, mapKey, tasks){
 	      var process=new Process();
 	      process.keystoneModel=keystoneModel;
+	      if(typeof(mapKey)==='string'){
+	    	  process.mapKey=mapKey;
+	  	}
+	  	else{
+	  		tasks=mapKey;
+	  	}
 	      var actionId=0;
 	      var prev=null;
 	      for(var p in tasks){
@@ -54,6 +60,7 @@ var Action=require('./lib/action').Action;
 	    getValue:getValue,
 	    getList:getList
 	}
+	Action.prototype.task=popkey.task;
 	exports.popkey=popkey;
 	/*popkey.task({
 	villa:{
